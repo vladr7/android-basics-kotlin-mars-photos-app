@@ -50,7 +50,7 @@ class OverviewViewModel : ViewModel() {
                 val listResult = MarsApi.retrofitService.getPhotos()
                 _status.value = "Success: ${listResult.size} photos retrieved!"
             } catch (e: Exception) {
-                _status.value = "Failure - poor/no internet"
+                _status.value = "${e.message}"
             }
         }
     }

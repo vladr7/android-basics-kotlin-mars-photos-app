@@ -1,8 +1,9 @@
 package com.example.android.marsphotos.network
 
-import com.squareup.moshi.Json
+import kotlinx.serialization.SerialName
 
+@kotlinx.serialization.Serializable
 data class MarsPhoto(
      val id: String,
-     @Json(name = "img_src") val imgSrcUrl: String
+     @SerialName("img_src") val imgSrcUrl: String
 )
